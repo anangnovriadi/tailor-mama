@@ -16,5 +16,15 @@
 // });
 
 Route::get('/', function () {
-    return view('admin/home');
+    return view('admin.home');
 });
+
+Route::get('/pelanggan/create', function () {
+    return view('admin.pelanggan.create');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
