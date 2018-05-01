@@ -19,12 +19,12 @@ Route::get('/', function () {
     return view('admin.home');
 });
 
-Route::get('/pelanggan/create', function () {
-    return view('admin.pelanggan.create');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/customer', 'CustomerController@index')->name('customer.index');
+Route::get('/customer/create', 'CustomerController@create')->name('customer.create');
+Route::post('/customer/create', 'CustomerController@store')->name('customer.store');
 
 

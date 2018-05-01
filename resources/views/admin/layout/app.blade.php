@@ -31,6 +31,12 @@
     <link rel="stylesheet" href="{{ asset('admin/plugins/wchat/smiley/assets/sprites/emojione.sprites.css') }}" />
     <script src="{{ asset('admin/assets/wchat/smiley/js/emojione.min.js') }}"></script>
 
+    {{-- DATA TABLES --}}
+    <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/responsive.bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/scroller.bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet" />
+
     <script type="text/javascript">
         // #################################################
         // # Optional
@@ -115,6 +121,11 @@
     <!-- LAYOUT JS -->
     <script src="{{ asset('admin/assets/js/demo.js') }}"></script>
     <script src="{{ asset('admin/assets/js/layout.js') }}"></script>
+
+    <script src="{{ asset('admin/plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') }}"></script>
+
+    <script src="{{ asset('admin/assets/js/pages/tables/jquery-datatable.js') }}"></script>
 
 </body>
 </html>

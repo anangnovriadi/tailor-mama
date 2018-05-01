@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 
-@section('pageTitle', 'Pelanggan')
+@section('pageTitle', 'Customer')
 
 @section('content')
 <section>
@@ -22,24 +22,25 @@
 		                    </h2>
 		                </div>
 		                <div class="body">
-		                    <form />
+		                    <form action="{{ route('customer.store') }}" method="post"> 
+							{{ csrf_field() }}
 		                        <div class="form-group">
 		                            <label>Nama Pelanggan</label>
-		                            <input type="text" class="form-control" placeholder="Nama Pelanggan" />
+		                            <input type="text" name="nama_pelanggan" class="form-control" placeholder="Nama Pelanggan" />
 		                        </div>
 		                        <div class="form-group">
 		                            <label>Email</label>
-		                            <input type="email" class="form-control" placeholder="Email" />
+		                            <input type="email" name="email" class="form-control" placeholder="Email" />
 		                        </div>
 		                        <div class="form-group">
 		                            <label>No Telepon</label>
-		                            <input type="text" class="form-control" placeholder="No Telepon" />
+		                            <input type="text" name="no_telp" class="form-control" placeholder="No Telepon" />
 		                        </div>
 		                        <div class="form-group">
 		                            <label>Alamat</label>
-		                            <textarea class="form-control" rows="5"></textarea>
+		                            <textarea class="form-control" name="alamat" rows="5"></textarea>
 		                        </div>
-		                        <button type="button" class="btn btn-primary waves-effect">Tambah</button>
+		                        <button type="submit" class="btn btn-primary waves-effect">Tambah</button>
 		                    </form>
 		                </div>
 		            </div>
