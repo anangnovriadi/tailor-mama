@@ -29,6 +29,7 @@
                                     <th>Email</th>
                                     <th>No Telepon</th>
                                     <th>Alamat</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -37,6 +38,7 @@
                                     <th>Email</th>
                                     <th>No Telepon</th>
                                     <th>Alamat</th>
+                                    <th>Actions</th>
                                 </tr>
                             </tfoot>
                             <tbody> 
@@ -46,6 +48,14 @@
                                     <td>{{ $customer->email }}</td>
                                     <td>{{ $customer->no_telp }}</td>
                                     <td>{{ $customer->alamat }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary waves-effect">
+                                            <i class="material-icons">mode_edit</i>
+                                        </button>
+                                        <button type="button" class="btn btn-danger waves-effect">
+                                            <i class="material-icons">delete</i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
