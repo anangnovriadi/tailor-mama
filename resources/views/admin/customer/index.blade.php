@@ -48,13 +48,19 @@
                                     <td>{{ $customer->email }}</td>
                                     <td>{{ $customer->no_telp }}</td>
                                     <td>{{ $customer->alamat }}</td>
-                                    <td>
+                                    <td style="display: flex;">
                                         <button type="button" class="btn btn-primary waves-effect">
-                                            <i class="material-icons">mode_edit</i>
+                                            <a style="color: white;" href="{{ route('customer.edit', $customer->id) }}">
+                                                <i class="material-icons">mode_edit</i>
+                                            </a>
                                         </button>
-                                        <button type="button" class="btn btn-danger waves-effect">
-                                            <i class="material-icons">delete</i>
-                                        </button>
+                                        <form class="" style="padding-left: 5px;" method="post" action="{{ route('customer.destroy', $customer->id) }}">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+                                            <button type="submit" class="btn btn-danger waves-effect">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
