@@ -15,7 +15,8 @@ class CreateTailorsTable extends Migration
     {
         Schema::create('tailors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_pelanggan');
+            $table->unsignedInteger('id_pelanggan');
+            $table->foreign('id_pelanggan')->references('id')->on('customers');
             $table->string('nama_jahitan');
             $table->integer('ongkos_jahitan');
             $table->integer('jumlah_jahitan');

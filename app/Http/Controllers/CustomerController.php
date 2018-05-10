@@ -28,7 +28,7 @@ class CustomerController extends Controller
             'alamat' => $request->input('alamat')
         ]);
 
-        return redirect()->route('customer.create');
+        return redirect()->route('customer.index');
     }
 
     public function edit($id) 

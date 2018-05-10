@@ -32,15 +32,6 @@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Nama Pelanggan</th>
-                                    <th>Email</th>
-                                    <th>No Telepon</th>
-                                    <th>Alamat</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </tfoot>
                             <tbody> 
                                 @foreach ($customers as $customer)
                                 <tr>
