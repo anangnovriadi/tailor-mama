@@ -19,12 +19,12 @@
                     <ul id="jahitan" class="nav sidebar-subnav collapse">
                         <li class="sidebar-subnav-header">Jahitan</li>
                         <li>
-                            <a href="#" title="Customer">
+                            <a href="" title="Jahitan">
                                 <span>Add Jahitan</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Jahitan">
+                            <a href="{{ route('tailor.index') }}" title="Jahitan">
                                 <span>Data Jahitan</span>
                             </a>
                         </li>

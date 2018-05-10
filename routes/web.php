@@ -30,3 +30,6 @@ Route::get('/customer/edit/{id}', 'CustomerController@edit')->name('customer.edi
 Route::patch('/customer/edit/{id}', 'CustomerController@update')->name('customer.update');
 Route::delete('/customer/delete/{id}', 'CustomerController@destroy')->name('customer.destroy');
 
+Route::get('/tailor', 'TailorController@index')->name('tailor.index');
+Route::get('/tailor/create', 'TailorController@create')->name('tailor.create');
+
