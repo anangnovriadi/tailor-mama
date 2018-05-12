@@ -32,4 +32,5 @@ Route::delete('/customer/delete/{id}', 'CustomerController@destroy')->name('cust
 
 Route::get('/tailor', 'TailorController@index')->name('tailor.index');
 Route::get('/tailor/create', 'TailorController@create')->name('tailor.create');
+Route::post('/tailor/create', 'TailorController@store')->name('tailor.store');
 

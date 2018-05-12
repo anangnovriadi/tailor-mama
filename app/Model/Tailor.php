@@ -12,4 +12,9 @@ class Tailor extends Model
         'total_harga', 'estimasi_selesai',
         'tgl_masuk', 'tgl_diambil'
     ];
+
+    public function customer()
+    {
+        return $this->belongsTo('App\Model\Customer', 'id_pelanggan');
+    }
 }

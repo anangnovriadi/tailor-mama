@@ -23,6 +23,14 @@
     <!--THIS PAGE LEVEL CSS-->
     <link href="{{ asset('admin/plugins/unslider/css/unslider.css') }}./plugins/" rel="stylesheet" />
     <link href="{{ asset('admin/plugins/chartist/css/chartist.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/boootstrap-datepicker/bootstrap-datepicker3.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/bootstrap-daterange/daterangepicker.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/clockface/css/clockface.css') }}" rel="stylesheet" />
+    <link href="{{ asset('admin/plugins/clockpicker/clockpicker.css') }}" rel="stylesheet" />
+
     <!--Chat Css-->
     <link href="{{ asset('admin/assets/wchat/assets/css/style-light.css') }}" rel="stylesheet" />
     <link href="{{ asset('admin/assets/wchat/assets/css/mobile.css') }}" rel="stylesheet" id="style" />
@@ -114,6 +122,18 @@
     <script type="text/javascript" src="{{ asset('admin/plugins/wchat/chatjs/dashboard.js') }}"></script>
     <script type="text/javascript" src="{{ asset('admin/plugins/wchat/chatjs/custom.js') }}"></script>
     <!-- #End# Chat js-->
+
+    {{-- DATEPICKER --}}
+    <script src="{{ asset('admin/plugins/momentjs/moment.js') }}"></script>
+    <script src="{{ asset('admin/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js') }}"></script>
+    <script src="{{ asset('admin/plugins/boootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('admin/plugins/bootstrap-datetime-picker/js/bootstrap-datetimepicker.js') }}"></script>
+    <script src="{{ asset('admin/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js') }}"></script>
+    <script src="{{ asset('admin/plugins/bootstrap-daterange/daterangepicker.js') }}"></script>
+    <script src="{{ asset('admin/plugins/clockface/js/clockface.js') }}"></script>
+    <script src="{{ asset('admin/plugins/clockpicker/clockpicker.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/pages/forms/date-time-picker-custom.js') }}"></script>
+    {{-- END DATEPICKER --}}
 
     <script src="{{ asset('admin/assets/js/pages/charts/jquery-knob.js') }}"></script>
     <script src="{{ asset('admin/assets/js/pages/index_2.js') }}"></script>

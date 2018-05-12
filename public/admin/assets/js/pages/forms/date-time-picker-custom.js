@@ -3,6 +3,7 @@
 
 $(function () {
     $('#date').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
+    $('#dateTwo').bootstrapMaterialDatePicker({ weekStart : 0, time: false });
 
     $('#time').bootstrapMaterialDatePicker({ date: false });
     $('#date-format').bootstrapMaterialDatePicker({ format : 'dddd DD MMMM YYYY - HH:mm' });

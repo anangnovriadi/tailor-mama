@@ -19,7 +19,7 @@
                     <ul id="jahitan" class="nav sidebar-subnav collapse">
                         <li class="sidebar-subnav-header">Jahitan</li>
                         <li>
-                            <a href="" title="Jahitan">
+                            <a href="{{ route('tailor.create') }}" title="Jahitan">
                                 <span>Add Jahitan</span>
                             </a>
                         </li>
@@ -38,13 +38,13 @@
                     <ul id="customer" class="nav sidebar-subnav collapse">
                         <li class="sidebar-subnav-header">Customer</li>
                         <li>
-                            <a href="{{ route('customer.index') }}" title="Customer">
-                                <span>Data Customer</span>
+                            <a href="{{ route('customer.create') }}" title="Customer">
+                                <span>Add Customer</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('customer.create') }}" title="Customer">
-                                <span>Add Customer</span>
+                            <a href="{{ route('customer.index') }}" title="Customer">
+                                <span>Data Customer</span>
                             </a>
                         </li>
                     </ul>

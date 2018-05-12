@@ -40,7 +40,7 @@
                                 @foreach ($tailors as $tailor)
                                 <tr>
                                     <td>{{ $tailor->nama_jahitan }}</td>
-                                    <td>{{ $tailor->id_pelanggan }}</td>
+                                    <td>{{ $tailor->customer->nama_pelanggan }}</td>
                                     <td>{{ $tailor->ongkos_jahitan }}</td>
                                     <td>{{ $tailor->jumlah_jahitan }}</td>
                                     <td>{{ $tailor->total_harga }}</td>
