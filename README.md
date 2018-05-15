@@ -1,2 +1,2 @@
-# taylor-mama
-Taylor
+# tailor-mama
+Tailor
