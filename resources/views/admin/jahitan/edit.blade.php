@@ -31,7 +31,7 @@
                                 </div>
 		                        <div class="form-group">
                                     <label>Nama Pelanggan</label>
-                                    <select class="form-control" name="id_pelanggan" size="1">
+                                    <select class="form-control" name="pelanggan_id" size="1">
                                         @foreach($customers as $customer)
                                             <option value="{{ $customer->id }}" @if($customer->id == $tailor->id_pelanggan) selected @endif>{{ $customer->nama_pelanggan }}</option>
                                         @endforeach

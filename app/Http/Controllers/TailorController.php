@@ -26,7 +26,7 @@ class TailorController extends Controller
     {
         Tailor::create([
             'nama_jahitan' => $request->input('nama_jahitan'),
-            'id_pelanggan' => $request->input('id_pelanggan'),
+            'pelanggan_id' => $request->input('pelanggan_id'),
             'ongkos_jahitan' => $request->input('ongkos'),
             'jumlah_jahitan' => $request->input('jumlah'),
             'total_harga' => $request->input('total_harga'),
@@ -52,7 +52,7 @@ class TailorController extends Controller
 
         $tailor->update([
             'nama_jahitan' => $request->input('nama_jahitan'),
-            'id_pelanggan' => $request->input('id_pelanggan'),
+            'pelanggan_id' => $request->input('pelanggan_id'),
             'ongkos_jahitan' => $request->input('ongkos'),
             'jumlah_jahitan' => $request->input('jumlah'),
             'total_harga' => $request->input('total_harga'),
