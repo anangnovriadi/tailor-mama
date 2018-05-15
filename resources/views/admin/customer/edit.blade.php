@@ -41,7 +41,7 @@
 		                            <label>Alamat</label>
                                 <textarea class="form-control" name="alamat" rows="5">{{ $customer->alamat }}</textarea>
 		                        </div>
-		                        <button type="submit" class="btn btn-primary waves-effect">Tambah</button>
+		                        <button type="submit" class="btn btn-primary waves-effect">Edit</button>
 		                    </form>
 		                </div>
 		            </div>

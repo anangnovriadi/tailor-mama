@@ -49,11 +49,11 @@
                                     <td>{{ $tailor->tgl_diambil }}</td>
                                     <td style="display: flex;">
                                         <button type="button" class="btn btn-primary waves-effect">
-                                            <a style="color: white;" href="">
+                                            <a style="color: white;" href="{{ route('tailor.edit', $tailor->id) }}">
                                                 <i class="material-icons">mode_edit</i>
                                             </a>
                                         </button>
-                                        <form class="" style="padding-left: 5px;" method="post" action="">
+                                        <form class="" style="padding-left: 5px;" method="post" action="{{ route('tailor.destroy', $tailor->id) }}">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button type="submit" class="btn btn-danger waves-effect">

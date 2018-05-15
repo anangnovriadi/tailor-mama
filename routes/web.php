@@ -33,4 +33,7 @@ Route::delete('/customer/delete/{id}', 'CustomerController@destroy')->name('cust
 Route::get('/tailor', 'TailorController@index')->name('tailor.index');
 Route::get('/tailor/create', 'TailorController@create')->name('tailor.create');
 Route::post('/tailor/create', 'TailorController@store')->name('tailor.store');
+Route::get('/tailor/edit/{id}', 'TailorController@edit')->name('tailor.edit');
+Route::patch('/tailor/edit/{id}', 'TailorController@update')->name('tailor.update');
+Route::delete('/tailor/delete/{id}', 'TailorController@destroy')->name('tailor.destroy');
 
