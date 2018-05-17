@@ -98,8 +98,6 @@
     @include('admin.layout.footer')
 </div>
     <!-- CORE PLUGIN JS -->
-    <script src="{{ asset('admin/plugins/') }}"></script>
-    <script src="{{ asset('admin/assets/') }}"></script>
     <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('admin/plugins/modernizr/modernizr.custom.js') }}"></script>
