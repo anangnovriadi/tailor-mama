@@ -39,7 +39,7 @@
                             <label for="rememberme">Remember Me</label>
                         </div>
                         <div class="col-xs-6 align-right p-t-5">
-                            <a href="./forgot-password.html">Forgot Password?</a>
+                            <a href="{{ route('password.request') }}">Forgot Password?</a>
                         </div>
                     </div>
 

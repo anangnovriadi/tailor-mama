@@ -1,0 +1,24 @@
+{
+  "name": "tailor-mama",
+  "description": "",
+  "main": "",
+  "authors": [
+    "anangnovriadi <anangnov99@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tailor"
+  ],
+  "homepage": "https://github.com/anangnovriadi/tailor-mama",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert": "^2.1.0"
+  }
+}
