@@ -22,7 +22,7 @@ class CustomerController extends Controller
     public function store(Request $request) 
     {
         $this->validate($request, [
-            'nama_pelanggan' => 'required',
+            'nama_pelanggan' => 'required|min:10',
             'email' => 'required',
             'no_telp' => 'required',
             'alamat' => 'required|min:8'
@@ -35,7 +35,7 @@ class CustomerController extends Controller
             'alamat' => $request->input('alamat')
         ]);
 
-        return redirect()->route('customer.index');
+        return redirect('customer/create')->with('alert', 'Success');
     }
 
     public function edit($id) 

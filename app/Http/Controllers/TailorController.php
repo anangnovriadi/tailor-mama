@@ -50,6 +50,17 @@ class TailorController extends Controller
     {
         $tailor = Tailor::find($id);
 
+        $this->validate($request, [
+            'nama_jahitan' => 'required|min:10',
+            'pelanggan_id' => 'required',
+            'ongkos_jahitan' => 'required',
+            'jumlah_jahitan' => 'required',
+            'total_harga' => 'required',
+            'estimasi_selesai' => 'required',
+            'tgl_masuk' => 'required',
+            'tgl_diambil' => 'required'
+        ]);
+
         $tailor->update([
             'nama_jahitan' => $request->input('nama_jahitan'),
             'pelanggan_id' => $request->input('pelanggan_id'),

@@ -11,11 +11,11 @@
                     <div class="col-lg-12">
                         <div class="login-logo">
                             <img src="{{ asset('admin/assets/images/logo-circle.png') }}" alt="" class="img-responsive img-circle align-center" />
-                            <p>Login Tailor Mama</p>
+                            <p>Login | Tailor Mama</p>
                         </div>
                     </div>
                 </div>
-                <form id="log_in" method="POST" action="{{ route('login') }}" />
+                <form id="log_in" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
                     <div class="input-group addon-line">
                         <span class="input-group-addon">

@@ -22,7 +22,14 @@
 		                    </h2>
 		                </div>
 		                <div class="body">
-		                    <form action="{{ route('customer.store') }}" method="post"> 
+							<form action="{{ route('customer.store') }}" method="post">
+							
+							@if(session('alert'))
+								<div class="alert alert-success alert-dismissible">
+									{{ session('alert') }}
+								</div>	
+							@endif
+								
 							{{ csrf_field() }}
 		                        <div class="form-group has-feedback{{ $errors->has('nama_pelanggan') ? ' has-error' : '' }}">
 		                            <label>Nama Pelanggan</label>
@@ -60,8 +67,8 @@
 										</span>
 									@endif
 		                        </div>
-		                        <button type="submit" class="btn btn-primary waves-effect">Tambah</button>
-		                    </form>
+								<button type="submit" class="btn btn-primary waves-effect">Tambah</button>
+							</form>
 		                </div>
 		            </div>
 		        </div>

@@ -15,6 +15,8 @@
     <link href="{{ asset('admin/plugins/animate-css/animate.css') }}" rel="stylesheet" />
     <link href="{{ asset('admin/plugins/spinkit/spinkit.css') }}" rel="stylesheet" />
 
+    <link src="{{ asset('bower_components/sweetalert/src/sweetalert.css') }}"></link>
+
     <!--REQUIRED THEME CSS -->
     <link href="{{ asset('admin/assets/css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('admin/assets/css/layout.css') }}" rel="stylesheet" />
@@ -97,6 +99,10 @@
 
     @include('admin.layout.footer')
 </div>
+    {{-- SWEAT ALERT --}}
+    <script src="{{ asset('bower_components/sweetalert/src/sweetalert.js') }}"></script>
+    {{-- END SWEAT ALERT --}}
+
     <!-- CORE PLUGIN JS -->
     <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.js') }}"></script>
