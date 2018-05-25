@@ -31,6 +31,20 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#pakaian" title="Jahitan" data-toggle="collapse" class="menu-toggle">
+                        <em class="material-icons">accessibility</em>
+                        <span>Pakaian</span>
+                    </a>
+                    <ul id="pakaian" class="nav sidebar-subnav collapse">
+                        <li class="sidebar-subnav-header">Pakaian</li>
+                        <li>
+                            <a href="{{ route('tailor.index') }}" title="Jahitan">
+                                <span>List Pakaian</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a href="#customer" title="Jahitan" data-toggle="collapse" class="menu-toggle">
                         <em class="material-icons">perm_identity</em>
                         <span>Customer</span>
