@@ -17,7 +17,7 @@
 		                    <div class="chart-bar">7,8,9,4,6,10,6,7,8,9,11</div>
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
-		                    <span> Sale </span>
+		                    <span> Jahitan </span>
 		                    <h2 class="num">350</h2>
 		                </div>
 		            </div>
@@ -28,8 +28,8 @@
 		                    <div class="chart-pie">40, 20, 21, 19</div>
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
-		                    <span> CPU Usages </span>
-		                    <h2 class="num">60%</h2>
+		                    <span> Pakaian </span>
+		                    <h2 class="num">40</h2>
 		                </div>
 		            </div>
 		        </div>
@@ -40,8 +40,8 @@
 		                    </canvas>
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
-		                    <span> Paris </span>
-		                    <h2 class="num">25°C</h2>
+		                    <span> Pelanggan </span>
+		                    <h2 class="num">250</h2>
 		                </div>
 		            </div>
 		        </div>
@@ -52,8 +52,8 @@
 		                    </canvas>
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
-		                    <span> Shimla </span>
-		                    <h2 class="num">-5°C</h2>
+		                    <span> Transaksi </span>
+		                    <h2 class="num">1000</h2>
 		                </div>
 		            </div>
 		        </div>

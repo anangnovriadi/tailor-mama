@@ -22,7 +22,14 @@
 		                    </h2>
 		                </div>
 		                <div class="body">
-		                    <form action="{{ route('tailor.store') }}" method="post"> 
+							<form action="{{ route('tailor.store') }}" method="post"> 
+							
+							@if(session('alert'))
+								<div class="alert alert-success alert-dismissible">
+									{{ session('alert') }}
+								</div>	
+							@endif
+
 							{{ csrf_field() }}
 		                        <div class="form-group">
 		                            <label>Nama Jahitan</label>

@@ -35,7 +35,7 @@ class TailorController extends Controller
             'tgl_diambil' => $request->input('tanggal_diambil')
         ]);
 
-        return redirect()->route('tailor.index'); 
+        return redirect()->route('tailor.create')->with('alert', 'Success Add!'); 
     }
 
     public function edit(Request $request, $id)

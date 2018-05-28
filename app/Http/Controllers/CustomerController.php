@@ -35,7 +35,7 @@ class CustomerController extends Controller
             'alamat' => $request->input('alamat')
         ]);
 
-        return redirect()->route('customer.index');
+        return redirect()->route('customer.create')->with('alert', 'Success Add!');
     }
 
     public function edit($id) 
