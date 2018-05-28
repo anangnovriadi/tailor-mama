@@ -19,6 +19,7 @@ class CreatePakaiansTable extends Migration
             $table->string('model_pakaian');
             $table->float('harga');
             $table->bigInteger('stok_pakaian');
+            $table->timestamps();
         });
     }
 

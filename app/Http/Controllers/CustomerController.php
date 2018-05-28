@@ -22,10 +22,10 @@ class CustomerController extends Controller
     public function store(Request $request) 
     {
         $this->validate($request, [
-            'nama_pelanggan' => 'required|min:10',
+            'nama_pelanggan' => 'required|min:5',
             'email' => 'required',
             'no_telp' => 'required',
-            'alamat' => 'required|min:8'
+            'alamat' => 'required|min:10'
         ]);
 
         Customer::create([

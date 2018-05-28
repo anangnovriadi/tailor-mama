@@ -46,6 +46,7 @@
     <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/responsive.bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/scroller.bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/css/fixedHeader.bootstrap.min.css') }}" rel="stylesheet" />
+    @yield('add_css')
 
     <script type="text/javascript">
         // #################################################
@@ -76,7 +77,7 @@
 
 <body class="theme-indigo light layout-fixed">
 <div class="wrapper">
-    <div class="page-loader-wrapper">
+    {{-- <div class="page-loader-wrapper">
         <div class="loader">
             <div class="sk-wave">
                 <div class="sk-rect sk-rect1 bg-cyan"></div>
@@ -87,7 +88,7 @@
             </div>
             <p>Please wait...</p>
         </div>
-    </div>
+    </div> --}}
     
     @include('admin.layout.header')
     
@@ -150,6 +151,6 @@
     <script src="{{ asset('admin/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') }}"></script>
 
     <script src="{{ asset('admin/assets/js/pages/tables/jquery-datatable.js') }}"></script>
-
+    @yield('add_js')
 </body>
 </html>

@@ -38,7 +38,7 @@
                     <ul id="pakaian" class="nav sidebar-subnav collapse">
                         <li class="sidebar-subnav-header">Pakaian</li>
                         <li>
-                            <a href="{{ route('tailor.index') }}" title="Jahitan">
+                            <a href="{{ route('pakaian.index') }}" title="Pakaian">
                                 <span>List Pakaian</span>
                             </a>
                         </li>
