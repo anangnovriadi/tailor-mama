@@ -44,16 +44,20 @@
                             <tbody> 
                                 @foreach ($pakaians as $pakaian)
                                 <tr class="item-pakaian{{ $pakaian->id }}">
+                                    <td class="del hidden" data-id="{{ $pakaian->id }}"></td>
                                     <td>{{ $pakaian->nama_pakaian }}</td>
                                     <td>{{ $pakaian->model_pakaian }}</td>
                                     <td>{{ $pakaian->harga }}</td>
                                     <td>{{ $pakaian->stok_pakaian }}</td>
                                     <td style="display: flex;">
                                         <button type="button" id="editModal" data-id="{{ $pakaian->id }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-primary waves-effect" style="margin-right: 4%;">
-                                            <i class="material-icons">mode_edit</i>                                        </button>
-                                        <button type="button" id="deleteModal" data-id="{{ $pakaian->id }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-danger waves-effect">
-                                            <i class="material-icons">delete</i>
+                                            <i class="material-icons">mode_edit</i>                                        
                                         </button>
+                                        <div class="delt">
+                                            <button type="button" id="deleteModal" data-id="{{ $pakaian->id }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-danger waves-effect">
+                                                <i class="material-icons">delete</i>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -148,49 +152,6 @@
             </div>
         </div>
         {{-- End Edit Modal --}}
-
-        {{-- Delete Modal --}}
-        <div class="modal fade" id="deletePakaian" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
-                        <h4 class="modal-title" id="myModalLabel"></h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card">
-                            <div class="body">
-                                <input type="text" id="id_pakaian_delete" name="id_pakaian" class="form-control hidden" placeholder="ID Pakaian" disabled/>
-                                <div class="form-group">
-                                    <label>Nama Pakaian</label>
-                                    <input type="text" id="nama_pakaian_delete" name="nama_pakaian" class="form-control" placeholder="Nama Pakaian" />
-                                </div>
-                                <p class="errorName alert alert-info hidden"></p>
-                                <div class="form-group">
-                                    <label>Model Pakaian</label>
-                                    <input type="text" id="model_pakaian_delete" name="model_pakaian" class="form-control" placeholder="Model Pakaian" />
-                                </div>
-                                <p class="errorModel alert alert-info hidden"></p>
-                                <div class="form-group">
-                                    <label>Harga</label>
-                                    <input type="number" id="harga_delete" name="harga" class="form-control" placeholder="Harga" />
-                                </div>
-                                <p class="errorHarga alert alert-info hidden"></p>
-                                <div class="form-group">
-                                    <label>Stok</label>
-                                    <input type="number" id="stok_pakaian_delete" name="stok_pakaian" class="form-control" placeholder="Stok" />
-                                </div>
-                                <p class="errorStok alert alert-info hidden"></p>
-                                <div class="btn-modal">
-                                    <button type="submit" id="btn-delete" class="btn btn-primary waves-effect" data-dismiss="modal">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{-- End Delete Modal --}}
 
     </div>
 </div>   
@@ -342,17 +303,8 @@
         });
     });
 
-    $(document).on('click', '#deleteModal', function() {
-        $('.modal-title').text('Delete Pakaian');
-        $('#id_pakaian_delete').val($(this).data('id'));
-        $('#nama_pakaian_delete').val($(this).data('nama_pakaian'));
-        $('#model_pakaian_delete').val($(this).data('model_pakaian'));
-        $('#harga_delete').val($(this).data('harga'));
-        $('#stok_pakaian_delete').val($(this).data('stok_pakaian'));
-        id = $('#id_pakaian_delete').val();    
-        $('#deletePakaian').modal('show');
-    });
-    $('.btn-modal').on('click', '#btn-delete', function() {
+    $('.delt').on('click', '#deleteModal', function() {
+        id = $('.del').data('id');
         $.ajax({
             type: 'DELETE',
             url: 'pakaian/'+ id,
