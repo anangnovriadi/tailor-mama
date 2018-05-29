@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "sweetalert": "^2.1.0"
+    "sweetalert": "^2.1.0",
+    "jquery-maskmoney": "https://github.com/plentz/jquery-maskmoney.git#^3.0.2"
   }
 }

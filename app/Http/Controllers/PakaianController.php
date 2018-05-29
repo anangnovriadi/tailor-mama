@@ -39,7 +39,14 @@ class PakaianController extends Controller
             $pakaian = new Pakaian();
             $pakaian->nama_pakaian = $request->nama_pakaian;
             $pakaian->model_pakaian = $request->model_pakaian;
-            $pakaian->harga = $request->harga;
+
+            $harga = $request->harga;
+            $reg = array(',00', 'Rp', '.');
+            $regStr = array('', '', '');
+
+            $hargaStr = str_replace($reg, $regStr, $harga);
+
+            $pakaian->harga = $hargaStr;
             $pakaian->stok_pakaian = $request->stok_pakaian;
             $pakaian->save();
 

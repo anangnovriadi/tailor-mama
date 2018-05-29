@@ -33,6 +33,7 @@
                         <table id="formPakaian" class="table table-bordered table-striped table-hover basic-example dataTable">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama Pakaian</th>
                                     <th>Model Pakaian</th>
                                     <th>Harga Satuan</th>
@@ -41,10 +42,12 @@
                                 </tr>
                                 {{ csrf_field() }}
                             </thead>
-                            <tbody> 
+                            <tbody>
+                                @php $key = 1; @endphp
                                 @foreach ($pakaians as $pakaian)
                                 <tr class="item-pakaian{{ $pakaian->id }}">
                                     <td class="del hidden" data-id="{{ $pakaian->id }}"></td>
+                                    <td>{{ $key }}</td>
                                     <td>{{ $pakaian->nama_pakaian }}</td>
                                     <td>{{ $pakaian->model_pakaian }}</td>
                                     <td>{{ $pakaian->harga }}</td>
@@ -60,6 +63,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                @php $key++; @endphp
                                 @endforeach
                             </tbody>
                         </table>
@@ -91,7 +95,7 @@
                                 <p class="errorModel alert alert-info hidden"></p>
                                 <div class="form-group">
                                     <label>Harga</label>
-                                    <input type="number" id="harga" name="harga" class="form-control" placeholder="Harga" />
+                                    <input type="text" id="harga" name="harga" class="form-control" placeholder="Harga" />
                                 </div>
                                 <p class="errorHarga alert alert-info hidden"></p>
                                 <div class="form-group">
@@ -160,7 +164,10 @@
 @section('add_js')
 <!-- toastr notifications -->
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+<script src="{{ asset('bower_components/jquery-maskmoney/dist/jquery.maskMoney.min.js') }}"></script>
+<script>
+    $('#harga').maskMoney({prefix:'Rp. ', thousands:'.', decimal:',', precission:0});
+</script>
 <script type="text/javascript">
     $(document).on('click', '#addModal', function() {
         $('.modal-title').text('Add Pakaian');
@@ -174,7 +181,7 @@
                 '_token': $('input[name=_token]').val(),
                 'nama_pakaian': $('#nama_pakaian').val(),
                 'model_pakaian': $('#model_pakaian').val(),
-                'harga': $('#harga').val(),
+                'harga': $('#harga').maskMoney('destroy').val(),
                 'stok_pakaian': $('#stok_pakaian').val()
             },
             success: function(data) {
