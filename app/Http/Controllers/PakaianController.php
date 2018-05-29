@@ -59,11 +59,28 @@ class PakaianController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make(Input::all(), $this->rules);
+
+        if($validator->fails()) {
+            return Response::json(array('errors' => $validator->getMessageBag()->toArray()));
+        } else {
+            $pakaian = Pakaian::findOrFail($id);
+            $pakaian->nama_pakaian = $request->nama_pakaian;
+            $pakaian->model_pakaian = $request->model_pakaian;
+            $pakaian->harga = $request->harga;
+            $pakaian->stok_pakaian = $request->stok_pakaian;
+            $pakaian->save();
+
+            return response()->json($pakaian);
+        }
     }
 
     public function destroy($id)
     {
-        //
+        $pakaian = Pakaian::findOrFail($id);
+
+        $pakaian->delete();
+
+        return response()->json($pakaian);
     }
 }
