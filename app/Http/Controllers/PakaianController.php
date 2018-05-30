@@ -20,8 +20,9 @@ class PakaianController extends Controller
     public function index()
     {
         $pakaians = Pakaian::all();
+        $count = Pakaian::count();
 
-        return view('admin.pakaian.index', ['pakaians' => $pakaians]);
+        return view('admin.pakaian.index', ['pakaians' => $pakaians], compact('count'));
     }
 
     public function create()

@@ -46,14 +46,14 @@
                                 @php $key = 1; @endphp
                                 @foreach ($pakaians as $pakaian)
                                 <tr class="item-pakaian{{ $pakaian->id }}">
-                                    <td class="del hidden" data-id="{{ $pakaian->id }}"></td>
-                                    <td>{{ $key }}</td>
+                                    <td class="hidden" data-id="{{ $pakaian->id }}"></td>
+                                    <td data-key="{{ $key }}">{{ $key }}</td>
                                     <td>{{ $pakaian->nama_pakaian }}</td>
                                     <td>{{ $pakaian->model_pakaian }}</td>
                                     <td>{{ $pakaian->harga }}</td>
                                     <td>{{ $pakaian->stok_pakaian }}</td>
                                     <td style="display: flex;">
-                                        <button type="button" id="editModal" data-id="{{ $pakaian->id }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-primary waves-effect" style="margin-right: 4%;">
+                                        <button type="button" id="editModal" data-id="{{ $pakaian->id }}" data-key="{{ $key }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-primary waves-effect" style="margin-right: 4%;">
                                             <i class="material-icons">mode_edit</i>                                        
                                         </button>
                                         <div class="delt">
@@ -125,7 +125,11 @@
                     <div class="modal-body">
                         <div class="card">
                             <div class="body">
-                                <input type="text" id="id_pakaian" name="id_pakaian" class="form-control hidden" placeholder="ID Pakaian" disabled/>
+                                <input type="text" id="id_pakaian" name="id_pakaian" class="form-control hidden" placeholder="ID Pakaian" disabled />
+                                <div class="form-group">
+                                    <label>No</label>
+                                    <input type="number" id="key_edit" name="key" class="form-control" placeholder="No" disabled />
+                                </div>
                                 <div class="form-group">
                                     <label>Nama Pakaian</label>
                                     <input type="text" id="nama_pakaian_edit" name="nama_pakaian" class="form-control" placeholder="Nama Pakaian" />
@@ -174,6 +178,7 @@
         $('#addPakaian').modal('show');
     });
     $('.btn-modal').on('click', '#btn-add', function() {
+        var key = {{ $count }} + 1;
         $.ajax({
             type: 'POST',
             url: 'pakaian',
@@ -181,7 +186,7 @@
                 '_token': $('input[name=_token]').val(),
                 'nama_pakaian': $('#nama_pakaian').val(),
                 'model_pakaian': $('#model_pakaian').val(),
-                'harga': $('#harga').maskMoney('destroy').val(),
+                'harga': $('#harga').val(),
                 'stok_pakaian': $('#stok_pakaian').val()
             },
             success: function(data) {
@@ -219,6 +224,8 @@
                     toastr.success('Success Add!', 'Succes Alert', {timeout: 5000});
                     $('#formPakaian').append(
                         "<tr><td>"
+                        + key +
+                        "</td><td>"
                         + data.nama_pakaian +
                         "</td><td>"
                         + data.model_pakaian +
@@ -239,20 +246,23 @@
     $(document).on('click', '#editModal', function() {
         $('.modal-title').text('Edit Pakaian');
         $('#id_pakaian').val($(this).data('id'));
+        $('#key_edit').val($(this).data('key'));
         $('#nama_pakaian_edit').val($(this).data('nama_pakaian'));
         $('#model_pakaian_edit').val($(this).data('model_pakaian'));
         $('#harga_edit').val($(this).data('harga'));
         $('#stok_pakaian_edit').val($(this).data('stok_pakaian'));
-        id = $('#id_pakaian').val();    
+        id = $('#id_pakaian').val();   
         $('#editPakaian').modal('show');
     });
     $('.btn-modal').on('click', '#btn-edit', function() {
+        var key = $('#key_edit').val();
         $.ajax({
             type: 'PUT',
             url: 'pakaian/'+ id,
             data: {
                 '_token': $('input[name=_token]').val(),
                 'id': $('#id_pakaian').val(),
+                // 'key': $('#key_edit').val(),
                 'nama_pakaian': $('#nama_pakaian_edit').val(),
                 'model_pakaian': $('#model_pakaian_edit').val(),
                 'harga': $('#harga_edit').val(),
@@ -293,6 +303,8 @@
                     toastr.success('Success Update!', 'Succes Alert', {timeout: 5000});
                     $('.item-pakaian'+ data.id).replaceWith(
                         "<tr><td>"
+                        + key +
+                        "</td><td>"
                         + data.nama_pakaian +
                         "</td><td>"
                         + data.model_pakaian +
@@ -311,7 +323,7 @@
     });
 
     $('.delt').on('click', '#deleteModal', function() {
-        id = $('.del').data('id');
+        id = $(this).data('id');
         $.ajax({
             type: 'DELETE',
             url: 'pakaian/'+ id,
