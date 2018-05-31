@@ -30,6 +30,9 @@
                         </div>
                     </div>
                     <div class="body">
+                        @if(!empty($count))
+                            {{ $count }}
+                        @endif
                         <table id="formPakaian" class="table table-bordered table-striped table-hover basic-example dataTable">
                             <thead>
                                 <tr>
@@ -46,21 +49,22 @@
                                 @php $key = 1; @endphp
                                 @foreach ($pakaians as $pakaian)
                                 <tr class="item-pakaian{{ $pakaian->id }}">
-                                    <td class="hidden" data-id="{{ $pakaian->id }}"></td>
-                                    <td data-key="{{ $key }}">{{ $key }}</td>
+                                    <td>{{ $key }}</td>
                                     <td>{{ $pakaian->nama_pakaian }}</td>
                                     <td>{{ $pakaian->model_pakaian }}</td>
                                     <td>{{ $pakaian->harga }}</td>
                                     <td>{{ $pakaian->stok_pakaian }}</td>
                                     <td style="display: flex;">
-                                        <button type="button" id="editModal" data-id="{{ $pakaian->id }}" data-key="{{ $key }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-primary waves-effect" style="margin-right: 4%;">
+                                        <div style="margin-right: 4%;">
+                                        <button type="button" id="editModal" data-id="{{ $pakaian->id }}" data-key="{{ $key }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-primary waves-effect">
                                             <i class="material-icons">mode_edit</i>                                        
                                         </button>
-                                        <div class="delt">
-                                            <button type="button" id="deleteModal" data-id="{{ $pakaian->id }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-danger waves-effect">
-                                                <i class="material-icons">delete</i>
-                                            </button>
                                         </div>
+                                        <div class="delt">
+                                        <button type="button" id="deleteModal" data-id="{{ $pakaian->id }}" data-key="{{ $key }}" data-nama_pakaian="{{ $pakaian->nama_pakaian }}" data-model_pakaian="{{ $pakaian->model_pakaian }}" data-harga="{{ $pakaian->harga }}" data-stok_pakaian="{{ $pakaian->stok_pakaian }}" class="btn btn-danger waves-effect">
+                                            <i class="material-icons">delete</i>
+                                        </button>
+                                        </div>  
                                     </td>
                                 </tr>
                                 @php $key++; @endphp
