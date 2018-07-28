@@ -3,6 +3,6 @@ Tailor
 
 Website Notifikasi untuk Pelanggan Penjahit
 
-Build with Laravel 5.6
+<li>Build with Laravel 5.6</li>
 
-See my project on branch develop
+<li>See my project on branch <b>develop</b></li>
