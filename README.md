@@ -1,5 +1,4 @@
 # tailor-mama
-Tailor
 
 Website Notifikasi untuk Pelanggan Penjahit
 
