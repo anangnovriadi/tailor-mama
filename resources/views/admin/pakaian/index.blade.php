@@ -30,9 +30,6 @@
                         </div>
                     </div>
                     <div class="body">
-                        @if(!empty($count))
-                            {{ $count }}
-                        @endif
                         <table id="formPakaian" class="table table-bordered table-striped table-hover basic-example dataTable">
                             <thead>
                                 <tr>

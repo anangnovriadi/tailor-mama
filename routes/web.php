@@ -44,3 +44,7 @@ Route::resource('/pakaian', 'PakaianController');
 // Route::get('/pakaian', 'PakaianController@index')->name('pakaian.index');
 // Route::post('/pakaian/create', 'PakaianController@store')->name('pakaian.store');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

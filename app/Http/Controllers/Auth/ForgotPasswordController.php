@@ -30,13 +30,13 @@ class ForgotPasswordController extends Controller
         $this->middleware('guest');
     }
 
-    public function sendResetLinkEmail()
-    {
-        return view('admin.auth.reset-admin');
-    }
+    // public function sendResetLinkEmail()
+    // {
+    //     return view('admin.auth.reset-admin');
+    // }
 
-    public function showLinkRequestForm()
-    {
-        return view('admin.auth.email-admin');
-    }
+    // public function showLinkRequestForm()
+    // {
+    //     return view('admin.auth.email-admin');
+    // }
 }
