@@ -31,7 +31,7 @@
                 <li>
                     <a style="padding-top:23px;" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                        document.getElementById('logout-form').submit();">
                         Logout
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
