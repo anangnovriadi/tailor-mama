@@ -11,8 +11,8 @@ use Response;
 class PakaianController extends Controller
 {
     protected $rules = [
-        'nama_pakaian' => 'required|min:8|regex:/^[a-z ,.\'-]+$/i',
-        'model_pakaian' => 'required|min:8|regex:/^[a-z ,.\'-]+$/i',
+        'nama_pakaian' => 'required|min:4|regex:/^[a-z ,.\'-]+$/i',
+        'model_pakaian' => 'required|regex:/^[a-z ,.\'-]+$/i',
         'harga' => 'required',
         'stok_pakaian' => 'required'
     ];
@@ -23,11 +23,6 @@ class PakaianController extends Controller
         $count = Pakaian::count();
 
         return view('admin.pakaian.index', ['pakaians' => $pakaians], compact('count'));
-    }
-
-    public function create()
-    {
-        //
     }
 
     public function store(Request $request)
@@ -53,16 +48,6 @@ class PakaianController extends Controller
 
             return response()->json($pakaian);
         }
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
     }
 
     public function update(Request $request, $id)

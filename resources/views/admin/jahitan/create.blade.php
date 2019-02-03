@@ -45,7 +45,7 @@
 								</div>
 								<div class="form-group">
 		                            <label>Ongkos</label>
-		                            <input type="number" name="ongkos" class="form-control" placeholder="Ongkos" />
+		                            <input type="number" name="ongkos" id="ongkos" class="form-control" placeholder="Ongkos" />
 								</div>
 								<div class="form-group">
 		                            <label>Jumlah</label>
@@ -53,7 +53,7 @@
 								</div>
 								<div class="form-group">
 		                            <label>Total Harga</label>
-		                            <input type="number" name="total_harga" class="form-control" placeholder="Total Harga" />
+		                            <input type="text" name="total_harga" id="harga" class="form-control" placeholder="Total Harga" />
 								</div>
 								<div class="form-group">
 		                            <label>Estimasi Selesai</label>
@@ -76,4 +76,12 @@
 	    </div>
 	</div>
 </section>
+
+@section('add_js')
+<script src="{{ asset('bower_components/jquery-maskmoney/dist/jquery.maskMoney.min.js') }}"></script>
+<script>
+    $('#harga').maskMoney({prefix:'Rp. ', thousands:'.', decimal:',', precission:0});
+</script>
+@endsection
+
 @endsection

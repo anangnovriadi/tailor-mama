@@ -11,7 +11,6 @@
             </a>
         </div>
         <div class="nav-wrapper">
-            <!-- START Left navbar-->
             <ul class="nav navbar-nav">
                 <li>
                     <a href="#" data-trigger-resize="" data-toggle-state="aside-collapsed" class="hidden-xs">
@@ -29,7 +28,7 @@
                     </a>
                 </li>
                 <li>
-                    <a style="padding-top:23px;" href="{{ route('logout') }}"
+                    <a style="padding-top:23px; padding-bottom:23px;" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         Logout

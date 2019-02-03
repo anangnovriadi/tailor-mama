@@ -167,7 +167,6 @@
 </section>
 
 @section('add_js')
-<!-- toastr notifications -->
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="{{ asset('bower_components/jquery-maskmoney/dist/jquery.maskMoney.min.js') }}"></script>
 <script>
@@ -263,7 +262,6 @@
             data: {
                 '_token': $('input[name=_token]').val(),
                 'id': $('#id_pakaian').val(),
-                // 'key': $('#key_edit').val(),
                 'nama_pakaian': $('#nama_pakaian_edit').val(),
                 'model_pakaian': $('#model_pakaian_edit').val(),
                 'harga': $('#harga_edit').val(),
