@@ -35,22 +35,10 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6 p-t-5">
-                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-blue" />
-                            <label for="rememberme">Remember Me</label>
-                        </div>
-                        <div class="col-xs-6 align-right p-t-5">
-                            <a href="{{ route('password.request') }}">Forgot Password?</a>
+                            {{--  --}}
                         </div>
                     </div>
-
                     <button class="btn btn-block btn-primary waves-effect" type="submit">LOG IN</button>
-
-                    <p class="text-muted text-center p-t-20">
-                        <small>Do not have an account?</small>
-                    </p>
-
-                    <a class="btn btn-sm btn-default btn-block" href="./register.html">Create an account</a>
-
                 </form>
             </div>
         </div>
