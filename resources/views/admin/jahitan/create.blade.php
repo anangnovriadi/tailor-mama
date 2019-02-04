@@ -45,7 +45,7 @@
 								</div>
 								<div class="form-group">
 		                            <label>Ongkos</label>
-		                            <input type="number" name="ongkos" id="ongkos" class="form-control" placeholder="Ongkos" />
+		                            <input type="text" name="ongkos" id="ongkos" class="form-control" placeholder="Ongkos" />
 								</div>
 								<div class="form-group">
 		                            <label>Jumlah</label>
@@ -80,7 +80,7 @@
 @section('add_js')
 <script src="{{ asset('bower_components/jquery-maskmoney/dist/jquery.maskMoney.min.js') }}"></script>
 <script>
-    $('#harga').maskMoney({prefix:'Rp. ', thousands:'.', decimal:',', precission:0});
+    $('#ongkos').maskMoney({prefix:'Rp. ', thousands:'.', decimal:',', precission:0});
 </script>
 @endsection
 
