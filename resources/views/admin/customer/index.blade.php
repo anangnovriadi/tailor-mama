@@ -25,6 +25,7 @@
                         <table class="table table-bordered table-striped table-hover basic-example dataTable">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama Pelanggan</th>
                                     <th>Email</th>
                                     <th>No Telepon</th>
@@ -33,8 +34,10 @@
                                 </tr>
                             </thead>
                             <tbody> 
+                                @php $no = 1; @endphp
                                 @foreach ($customers as $customer)
                                 <tr>
+                                    <td>{{ $no }}</td>
                                     <td>{{ $customer->nama_pelanggan }}</td>
                                     <td>{{ $customer->email }}</td>
                                     <td>{{ $customer->no_telp }}</td>
@@ -54,6 +57,7 @@
                                         </form>
                                     </td>
                                 </tr>
+                                @php $no++; @endphp
                                 @endforeach
                             </tbody>
                         </table>

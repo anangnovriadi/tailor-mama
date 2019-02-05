@@ -25,6 +25,7 @@
                         <table class="table table-bordered table-striped table-hover basic-example dataTable">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>Nama Jahitan</th>
                                     <th>Nama Pelanggan</th>
                                     <th>Ongkos Jahitan</th>
@@ -37,8 +38,10 @@
                                 </tr>
                             </thead>
                             <tbody> 
+                                @php $no = 1; @endphp
                                 @foreach ($tailors as $tailor)
                                 <tr>
+                                    <td>{{ $no }}</td>
                                     <td>{{ $tailor->nama_jahitan }}</td>
                                     <td>{{ $tailor->customer->nama_pelanggan }}</td>
                                     <td>{{ $tailor->ongkos_jahitan }}</td>
@@ -62,6 +65,7 @@
                                         </form>
                                     </td>
                                 </tr>
+                                @php $no++; @endphp
                                 @endforeach
                             </tbody>
                         </table>
