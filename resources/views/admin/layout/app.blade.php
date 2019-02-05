@@ -77,7 +77,7 @@
 
 <body class="theme-indigo light layout-fixed">
 <div class="wrapper">
-    {{-- <div class="page-loader-wrapper">
+    <div class="page-loader-wrapper">
         <div class="loader">
             <div class="sk-wave">
                 <div class="sk-rect sk-rect1 bg-cyan"></div>
@@ -88,7 +88,7 @@
             </div>
             <p>Please wait...</p>
         </div>
-    </div> --}}
+    </div>
     
     @include('admin.layout.header')
     
