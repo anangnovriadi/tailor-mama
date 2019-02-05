@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 
-@section('pageTitle', 'Home')
+@section('pageTitle', 'Dashboard')
 
 @section('content')
 
@@ -14,7 +14,7 @@
 		        <div class="col-lg-3">
 		            <div class="widget bg-indigo">
 		                <div class="col-xs-4 widget-icon">
-		                    <div class="chart-bar">7,8,9,4,6,10,6,7,8,9,11</div>
+							<i class="icon-display fa fa-tree"></i>
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Jahitan </span>
@@ -25,7 +25,7 @@
 		        <div class="col-lg-3">
 		            <div class="widget bg-red">
 		                <div class="col-xs-4 widget-icon">
-		                    <div class="chart-pie">40, 20, 21, 19</div>
+							<i class="icon-display fa fa-female"></i>		                    
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Pakaian </span>
@@ -36,8 +36,7 @@
 		        <div class="col-lg-3">
 		            <div class="widget bg-cyan">
 		                <div class="col-xs-4 widget-icon">
-		                    <canvas id="partly_cloudy_day_2" width="50" height="50" class="m-t-15">
-		                    </canvas>
+							<i class="icon-display fa fa-user"></i>	
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Pelanggan </span>
@@ -48,8 +47,7 @@
 		        <div class="col-lg-3">
 		            <div class="widget bg-green">
 		                <div class="col-xs-4 widget-icon">
-		                    <canvas id="snow_2" width="50" height="50" class="m-t-15">
-		                    </canvas>
+							<i class="icon-display fa fa-dollar"></i>	
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Transaksi </span>
