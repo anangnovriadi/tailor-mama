@@ -45,15 +45,15 @@
 								</div>
 								<div class="form-group">
 		                            <label>Ongkos</label>
-		                            <input type="text" name="ongkos" id="ongkos" class="form-control" placeholder="Ongkos" />
+		                            <input type="text" name="ongkos" id="ongkos" class="form-control ongkos" placeholder="Ongkos" />
 								</div>
 								<div class="form-group">
 		                            <label>Jumlah</label>
-		                            <input type="number" name="jumlah" class="form-control" placeholder="Jumlah" />
+		                            <input type="text" name="jumlah" value="1" class="form-control ongkos" placeholder="Jumlah" />
 								</div>
 								<div class="form-group">
-		                            <label>Total Harga</label>
-		                            <input type="text" name="total_harga" id="harga" class="form-control" placeholder="Total Harga" />
+									<label>Total Harga</label>
+		                            <input style="background: #ebebe4;" type="text" name="total_harga" id="total" class="form-control" placeholder="Total Harga" disabled />
 								</div>
 								<div class="form-group">
 		                            <label>Estimasi Selesai</label>
@@ -76,12 +76,18 @@
 	    </div>
 	</div>
 </section>
-
 @section('add_js')
-<script src="{{ asset('bower_components/jquery-maskmoney/dist/jquery.maskMoney.min.js') }}"></script>
-<script>
-    $('#ongkos').maskMoney({prefix:'Rp. ', thousands:'.', decimal:',', precission:0});
-</script>
+	<script>
+		$('.ongkos').keyup(function() {
+			var sum = 0;
+			var ongkos = $('#ongkos').val();
+
+			$('.ongkos').each(function() {
+				sum = ongkos * Number($(this).val());
+			});
+			$('#total').val(sum);
+		});
+	</script>
 @endsection
 
 @endsection
