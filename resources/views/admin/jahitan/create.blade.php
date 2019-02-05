@@ -77,17 +77,7 @@
 	</div>
 </section>
 @section('add_js')
-	<script>
-		$('.ongkos').keyup(function() {
-			var sum = 0;
-			var ongkos = $('#ongkos').val();
-
-			$('.ongkos').each(function() {
-				sum = ongkos * Number($(this).val());
-			});
-			$('#total').val(sum);
-		});
-	</script>
+	<script src="{{ asset('admin/assets/js/custom/script.js') }}"></script>
 @endsection
 
 @endsection

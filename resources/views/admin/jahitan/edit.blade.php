@@ -39,15 +39,15 @@
 								</div>
 								<div class="form-group">
 		                            <label>Ongkos</label>
-                                    <input type="number" name="ongkos" class="form-control" placeholder="Ongkos" value="{{ $tailor->ongkos_jahitan }}" />
+                                    <input type="text" name="ongkos" id="ongkos" class="form-control ongkos" placeholder="Ongkos" value="{{ $tailor->ongkos_jahitan }}" />
 								</div>
 								<div class="form-group">
 		                            <label>Jumlah</label>
-                                    <input type="number" name="jumlah" class="form-control" placeholder="Jumlah" value="{{ $tailor->jumlah_jahitan }}" />
+                                    <input type="text" name="jumlah" class="form-control ongkos" placeholder="Jumlah" value="{{ $tailor->jumlah_jahitan }}" />
 								</div>
 								<div class="form-group">
 		                            <label>Total Harga</label>
-		                            <input type="number" name="total_harga" class="form-control" placeholder="Total Harga" value="{{ $tailor->total_harga }}" />
+		                            <input style="background: #ebebe4;" type="text" name="total_harga" id="total" class="form-control" placeholder="Total Harga" value="{{ $tailor->total_harga }}" readonly />
 								</div>
 								<div class="form-group">
 		                            <label>Estimasi Selesai</label>
@@ -70,4 +70,8 @@
 	    </div>
 	</div>
 </section>
+@section('add_js')
+	<script src="{{ asset('admin/assets/js/custom/script.js') }}"></script>
+@endsection
+
 @endsection

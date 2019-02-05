@@ -8,7 +8,7 @@
 	<div class="content-wrapper">
 		<div class="container-fluid">
 		    <div class="page-header">
-		        <h2>DASHBOARD</h2>
+		        <h2>Dashboard</h2>
 		    </div>
 		    <div class="row clearfix">
 		        <div class="col-lg-3">
