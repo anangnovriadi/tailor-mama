@@ -6,7 +6,7 @@
                     <span>MAIN NAVIGATION</span>
                 </li>
                 <li>
-                    <a href="/" title="Dashboard">
+                    <a href="{{ route('dashboard') }}" title="Dashboard">
                         <em class="material-icons">dashboard</em>
                         <span>Dashboard</span>
                     </a>
@@ -64,28 +64,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#assetment" title="Assets" data-toggle="collapse" class="menu-toggle">
-                        <em class="material-icons">assessment</em>
-                        <span>Assets</span>
+                    <a href="#" title="Setting">
+                        <em class="material-icons">print</em>
+                        <span>Laporan</span>
                     </a>
-                    <ul id="assetment" class="nav sidebar-subnav collapse">
-                        <li class="sidebar-subnav-header">Assets</li>
-                        <li>
-                            <a href="#" title="Data Asset">
-                                <span>Data Asset</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" title="Stok Asset">
-                                <span>Stok Asset</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" title="Add Asset">
-                                <span>Add Asset</span>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a href="#" title="Setting">
