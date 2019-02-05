@@ -53,7 +53,7 @@
 								</div>
 								<div class="form-group">
 									<label>Total Harga</label>
-		                            <input style="background: #ebebe4;" type="text" name="total_harga" id="total" class="form-control" placeholder="Total Harga" disabled />
+		                            <input style="background: #ebebe4;" type="text" name="total_harga" id="total" class="form-control" placeholder="Total Harga" readonly  />
 								</div>
 								<div class="form-group">
 		                            <label>Estimasi Selesai</label>

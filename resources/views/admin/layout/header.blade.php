@@ -1,7 +1,7 @@
 <header class="topnavbar-wrapper">
     <nav role="navigation" class="navbar topnavbar">
         <div class="navbar-header">
-            <a href="/" class="navbar-brand">
+            <a href="{{ route('dashboard') }}" class="navbar-brand">
                 <div class="brand-logo">
                     <img src="{{ asset('admin/assets/images/logo.png') }}" alt="Admin Logo" class="img-responsive" />
                 </div>
