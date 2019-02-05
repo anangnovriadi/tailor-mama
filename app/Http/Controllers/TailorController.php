@@ -8,6 +8,10 @@ use App\Model\Customer;
 
 class TailorController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $tailors = Tailor::with('customer')->get();

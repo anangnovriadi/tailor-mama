@@ -10,6 +10,10 @@ use Response;
 
 class PakaianController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     protected $rules = [
         'nama_pakaian' => 'required|min:4|regex:/^[a-z ,.\'-]+$/i',
         'model_pakaian' => 'required|regex:/^[a-z ,.\'-]+$/i',
