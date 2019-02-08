@@ -42,4 +42,6 @@ Route::prefix('admin')->group(function () {
     Route::resource('/pakaian', 'PakaianController');
     // Route::get('/pakaian', 'PakaianController@index')->name('pakaian.index');
     // Route::post('/pakaian/create', 'PakaianController@store')->name('pakaian.store');
+
+    Route::get('/laporan', 'ReportController@pdf')->name('cetak.pdf');
 });

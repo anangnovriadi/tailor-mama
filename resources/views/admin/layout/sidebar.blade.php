@@ -64,7 +64,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" title="Setting">
+                    <a href="{{ route('cetak.pdf') }}" title="Setting">
                         <em class="material-icons">print</em>
                         <span>Laporan</span>
                     </a>
