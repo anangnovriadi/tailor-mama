@@ -28,6 +28,16 @@ class TailorController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nama_jahitan' => 'required|min:10',
+            'pelanggan_id' => 'required',
+            'ongkos_jahitan' => 'required',
+            'jumlah_jahitan' => 'required',
+            'total_harga' => 'required',
+            'estimasi_selesai' => 'required',
+            'tgl_masuk' => 'required',
+        ]);
+
         Tailor::create([
             'nama_jahitan' => $request->input('nama_jahitan'),
             'pelanggan_id' => $request->input('pelanggan_id'),
@@ -36,7 +46,7 @@ class TailorController extends Controller
             'total_harga' => $request->input('total_harga'),
             'estimasi_selesai' => $request->input('estimasi_selesai'),
             'tgl_masuk' => $request->input('tanggal_masuk'),
-            'tgl_diambil' => $request->input('tanggal_diambil')
+            'verification_type' => 0,
         ]);
 
         return redirect()->route('tailor.create')->with('alert', 'Success Add!'); 
@@ -54,17 +64,6 @@ class TailorController extends Controller
     {
         $tailor = Tailor::find($id);
 
-        $this->validate($request, [
-            'nama_jahitan' => 'required|min:10',
-            'pelanggan_id' => 'required',
-            'ongkos_jahitan' => 'required',
-            'jumlah_jahitan' => 'required',
-            'total_harga' => 'required',
-            'estimasi_selesai' => 'required',
-            'tgl_masuk' => 'required',
-            'tgl_diambil' => 'required'
-        ]);
-
         $tailor->update([
             'nama_jahitan' => $request->input('nama_jahitan'),
             'pelanggan_id' => $request->input('pelanggan_id'),
@@ -73,6 +72,7 @@ class TailorController extends Controller
             'total_harga' => $request->input('total_harga'),
             'estimasi_selesai' => $request->input('estimasi_selesai'),
             'tgl_masuk' => $request->input('tanggal_masuk'),
+            'verification_type' => $request->input('verification_type'),
             'tgl_diambil' => $request->input('tanggal_diambil')
         ]);
 

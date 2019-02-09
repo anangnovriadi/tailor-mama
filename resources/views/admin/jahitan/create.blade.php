@@ -63,10 +63,6 @@
 		                            <label>Tanggal Masuk</label>
 		                            <input type="text" id="date" name="tanggal_masuk" class="form-control" placeholder="Tanggal Masuk" />
 								</div>
-								<div class="form-group">
-		                            <label>Tanggal Diambil</label>
-		                            <input type="text" id="dateTwo" name="tanggal_diambil" class="form-control" placeholder="Tanggal Diambil" />
-								</div>
 		                        <button type="submit" class="btn btn-primary waves-effect">Tambah</button>
 		                    </form>
 		                </div>

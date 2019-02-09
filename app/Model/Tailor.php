@@ -10,7 +10,7 @@ class Tailor extends Model
         'nama_jahitan', 'pelanggan_id',
         'ongkos_jahitan', 'jumlah_jahitan',
         'total_harga', 'estimasi_selesai',
-        'tgl_masuk', 'tgl_diambil'
+        'tgl_masuk', 'tgl_diambil', 'verification_type'
     ];
 
     public function customer()

@@ -23,7 +23,8 @@ class CreateTailorsTable extends Migration
             $table->integer('total_harga');
             $table->integer('estimasi_selesai');
             $table->dateTime('tgl_masuk');
-            $table->dateTime('tgl_diambil');
+            $table->dateTime('tgl_diambil')->nullable();
+            $table->boolean('verification_type');
             $table->timestamps();
         });
     }

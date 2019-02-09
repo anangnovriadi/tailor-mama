@@ -58,6 +58,18 @@
 		                            <input type="text" id="date" name="tanggal_masuk" class="form-control" placeholder="Tanggal Masuk" value="{{ $tailor->tgl_masuk }}" />
 								</div>
 								<div class="form-group">
+									<label>Type</label>
+									<select class="form-control" name="verification_type" size="1">
+										@if($tailor->verification_type == null)
+											<option value="0" selected>Belum Diambil</option>
+											<option value="1">Sudah Diambil</option>
+										@else
+											<option value="0">Belum Diambil</option>
+											<option value="1" selected>Sudah Diambil</option>
+										@endif
+									</select>
+								</div>
+								<div class="form-group">
 		                            <label>Tanggal Diambil</label>
 		                            <input type="text" id="dateTwo" name="tanggal_diambil" class="form-control" placeholder="Tanggal Diambil" value="{{ $tailor->tgl_diambil }}" />
 								</div>

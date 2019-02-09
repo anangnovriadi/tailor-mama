@@ -33,7 +33,7 @@
                                     <th>Total Harga</th>
                                     <th>Estimasi Selesai</th>
                                     <th>Tanggal Masuk</th>
-                                    <th>Tanggal Diambil</th>
+                                    <th>Type</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -49,7 +49,14 @@
                                     <td>{{ $tailor->total_harga }}</td>
                                     <td>{{ $tailor->estimasi_selesai }}</td>
                                     <td>{{ $tailor->tgl_masuk }}</td>
-                                    <td>{{ $tailor->tgl_diambil }}</td>
+                                    <td>
+                                        @if($tailor->tgl_diambil == null)
+                                            Belum Diambil
+                                        @else
+                                            Sudah diambil 
+                                            {{ $tailor->tgl_diambil }}
+                                        @endif
+                                    </td>
                                     <td style="display: flex;">
                                         <button type="button" class="btn btn-primary waves-effect">
                                             <a style="color: white;" href="{{ route('tailor.edit', $tailor->id) }}">
