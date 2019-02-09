@@ -30,12 +30,9 @@ class TailorController extends Controller
     {
         $this->validate($request, [
             'nama_jahitan' => 'required|min:10',
-            'pelanggan_id' => 'required',
-            'ongkos_jahitan' => 'required',
-            'jumlah_jahitan' => 'required',
-            'total_harga' => 'required',
+            'ongkos' => 'required',
             'estimasi_selesai' => 'required',
-            'tgl_masuk' => 'required',
+            'tanggal_masuk' => 'required',
         ]);
 
         Tailor::create([
@@ -46,9 +43,9 @@ class TailorController extends Controller
             'total_harga' => $request->input('total_harga'),
             'estimasi_selesai' => $request->input('estimasi_selesai'),
             'tgl_masuk' => $request->input('tanggal_masuk'),
-            'verification_type' => 0,
+            'verification_type' => $request->input('verification_type'),
         ]);
-
+        
         return redirect()->route('tailor.create')->with('alert', 'Success Add!'); 
     }
 

@@ -51,10 +51,10 @@
                                     <td>{{ $tailor->tgl_masuk }}</td>
                                     <td>
                                         @if($tailor->tgl_diambil == null)
-                                            Belum Diambil
+                                            <span class="badge badge-default">Belum Diambil</span>
                                         @else
-                                            Sudah diambil 
-                                            {{ $tailor->tgl_diambil }}
+                                            <span class="badge badge-primary">Sudah diambil</span>
+                                            <span class="badge badge-primary">{{ $tailor->tgl_diambil }}</span>
                                         @endif
                                     </td>
                                     <td style="display: flex;">
