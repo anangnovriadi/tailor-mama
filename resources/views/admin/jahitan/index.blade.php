@@ -53,8 +53,11 @@
                                         @if($tailor->tgl_diambil == null)
                                             <span class="badge badge-default">Belum Diambil</span>
                                         @else
+                                            @php 
+                                                $dateHumans = $tailor->tgl_diambil;
+                                            @endphp
                                             <span class="badge badge-primary">Sudah diambil</span>
-                                            <span class="badge badge-primary">{{ $tailor->tgl_diambil }}</span>
+                                            <span class="badge badge-primary">{{ date("l, F jS Y", strtotime($dateHumans)) }}</span>
                                         @endif
                                     </td>
                                     <td style="display: flex;">
