@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Customer;
+use App\Model\Pakaian;
+use App\Model\Tailor;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $pakaian = Pakaian::all()->count();
+        $tailor = Tailor::all()->count();
+        $customer = Customer::all()->count();
+
+        return view('admin.home', compact('pakaian', 'tailor', 'customer'));
     }
 }

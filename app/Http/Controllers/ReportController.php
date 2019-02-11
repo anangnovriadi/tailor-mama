@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\View;
 class ReportController extends Controller
 {
     public function pdf(Request $request) {
-        $tailors = DB::table('tailors')->get();
+        $tailors = DB::table('tailors')->where('verification_type', '=', '1')->get();
 
         view()->share('tailors', $tailors);
 

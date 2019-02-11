@@ -18,7 +18,7 @@
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Jahitan </span>
-		                    <h2 class="num">350</h2>
+		                    <h2 class="num">{{ $tailor }}</h2>
 		                </div>
 		            </div>
 		        </div>
@@ -29,7 +29,7 @@
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Pakaian </span>
-		                    <h2 class="num">40</h2>
+		                    <h2 class="num">{{ $pakaian }}</h2>
 		                </div>
 		            </div>
 		        </div>
@@ -40,7 +40,7 @@
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Pelanggan </span>
-		                    <h2 class="num">250</h2>
+		                    <h2 class="num">{{ $customer }}</h2>
 		                </div>
 		            </div>
 		        </div>
@@ -51,7 +51,7 @@
 		                </div>
 		                <div class="col-xs-8 widget-body text-right">
 		                    <span> Transaksi </span>
-		                    <h2 class="num">1000</h2>
+		                    <h2 class="num">24</h2>
 		                </div>
 		            </div>
 		        </div>
